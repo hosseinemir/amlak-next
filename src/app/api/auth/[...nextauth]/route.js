@@ -4,6 +4,7 @@ import AmlakUser from "@/models/AmlakUser";
 import { verifypassword } from "@/utils/Auth";
 import ConnectDB from "@/utils/ConnectDB";
 
+
 export const authOptions = {
   session: { strategy: "jwt" },
   providers: [
@@ -26,8 +27,9 @@ export const authOptions = {
 
         return { email };
       },
-    }),
+    })
   ],
+  
 };
 const handler = NextAuth(authOptions);
 

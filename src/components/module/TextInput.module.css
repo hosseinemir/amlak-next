@@ -1,0 +1,25 @@
+.container {
+  width: 100%;
+  max-width: 320px;
+  margin-bottom: 40px;
+}
+.container p {
+  font-weight: 400;
+  font-size: 14px;
+}
+.input,
+.textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px var(--palet2) dashed;
+  border-radius: 5px;
+  color: gray;
+  height: 40px;
+}
+.input:focus,
+.textarea:focus {
+  border: 1px var(--palet2) solid;
+}
+.textarea {
+  height: 100px;
+}

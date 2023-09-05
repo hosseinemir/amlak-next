@@ -1,0 +1,10 @@
+.container{
+    margin-bottom: 40px;
+}
+.container input{
+    width: 80px;
+    border: 1px dashed var(--palet2);
+}
+.container input:focus{
+    border: 1px solid var(--palet2);
+}

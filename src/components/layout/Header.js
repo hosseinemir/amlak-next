@@ -1,7 +1,11 @@
+"use client";
 import Link from "next/link";
 import styles from "./Header.module.css";
 import { FiLogIn } from "react-icons/fi";
+import { FaUserAlt } from "react-icons/fa";
+import { useSession } from "next-auth/react";
 export default function Header() {
+  const { data } = useSession();
   return (
     <div className={styles.container}>
       <div className={styles.links}>
@@ -15,10 +19,16 @@ export default function Header() {
         </ul>
       </div>
       <div className={styles.login}>
-        <Link href={"./signin"}>
-          <FiLogIn />
-          <span>ورود</span>
-        </Link>
+        {data ? (
+          <Link href={"/dashboard"}>
+            <FaUserAlt />
+          </Link>
+        ) : (
+          <Link href={"/signin"}>
+            <FiLogIn />
+            <span>ورود</span>
+          </Link>
+        )}
       </div>
     </div>
   );

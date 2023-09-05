@@ -1,0 +1,24 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    
+}
+.container>p{
+    font-weight: 400;
+}
+.radiocontainer{
+    display: flex;
+    margin-bottom: 40px;
+}
+.radiodiv{
+    background-color: var(--palet2);
+    padding: 8px;
+    border-radius: 4px;
+    margin: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.radiodiv label{
+    margin-left: 5px;
+}

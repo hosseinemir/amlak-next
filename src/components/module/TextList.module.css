@@ -1,0 +1,56 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 40px;
+}
+.container>p{
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+.card input{
+     width: 80%;
+  padding: 5px;
+  border: 1px var(--palet2) dashed;
+  border-radius: 5px;
+  color: gray;
+  height: 30px;
+  margin-left: 10px;
+  margin-bottom: 15px;
+}
+.card input:focus{
+  border: 1px var(--palet2) solid;
+
+}
+.card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card button{
+    background-color: unset;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  margin-bottom: 15px;
+
+}
+.card button svg{
+    color: red;
+    font-size: 24px;
+    cursor: pointer;
+    
+}
+.btn{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 4px;
+    background-color: var(--palet3);
+    border: none;
+    padding: 10px;
+    color: var(--white);
+    font-weight: 400;
+    cursor: pointer;
+}

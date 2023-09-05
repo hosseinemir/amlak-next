@@ -65,12 +65,12 @@ export default function SignupPage() {
 
     if (res.status === 201) {
       toast.success("حساب کاربری ایجاد شد");
-      // await signIn("credentials", {
-      //   email,
-      //   password,
-      //   redirect: false,
-      // });
-      router.push("./");
+      await signIn("credentials", {
+        email,
+        password,
+        redirect: false,
+      });
+      router.push("/");
     } else {
       toast.error(data.error);
     }
@@ -128,10 +128,7 @@ export default function SignupPage() {
       <p className={styles.before}>
         قبلا ثبت نام کردید ؟ <Link href={"./signin"}>ورود</Link>
       </p>
-      <div className={styles.googlediv}>
-        <p>ورود با گوگل</p>
-        <button className={styles.googlebtn}>ورود توسط جیمیل</button>
-      </div>
+     
       <Toaster />
     </div>
   );

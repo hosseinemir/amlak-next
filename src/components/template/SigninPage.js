@@ -43,14 +43,13 @@ export default function SigninPage() {
       password,
       redirect: false,
     });
-    
-
     setLoader(false);
 
     if (res.error) {
+      console.log("first")
       toast.error(res.error);
     } else {
-      router.push("./");
+      router.push("/");
     }
   };
   return (
@@ -96,10 +95,7 @@ export default function SigninPage() {
       <p className={styles.before}>
         قبلا ثبت نام نکرده اید ؟ <Link href={"./signup"}>ثبت نام</Link>
       </p>
-      <div className={styles.googlediv}>
-        <p>ورود با گوگل</p>
-        <button className={styles.googlebtn}>ورود توسط جیمیل</button>
-      </div>
+     
       <Toaster />
     </div>
   );

@@ -26,7 +26,7 @@ export async function POST(req) {
       email: email,
       password: hashedpassword,
     });
-    console.log(newuser);
+    
     return NextResponse.json(
       { message: "یوزر با موفقیت اضافه شد" },
       { status: 201 }

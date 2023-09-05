@@ -1,0 +1,81 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+}
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  font-weight: 200;
+  padding: 5px 15px;
+  box-shadow: 0 0 15px -5px rgb(0, 0, 0, 0.8);
+  border-radius: 8px;
+  width: 100%;
+}
+.email {
+  display: flex;
+  color: var(--palet4);
+}
+.email svg {
+  font-size: 25px;
+  margin-left: 15px;
+}
+.email p {
+  font-size: 16px;
+  font-weight: 400;
+}
+.links {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+}
+.links a,
+.links button {
+  margin: 2px 5px;
+  color: var(--palet4);
+  font-weight: 400;
+  font-size: 12px;
+}
+.dashboard {
+  margin-top: 40px;
+  width: 100%;
+}
+@media only screen and (min-width: 468px) {
+}
+@media only screen and (min-width: 768px) {
+  .container {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .sidebar {
+    width: 25%;
+    max-width: 200px;
+    align-items: center;
+    padding: 15px;
+  }
+  .dashboard{
+    margin-right: 40px;
+  }
+  .email {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .links {
+    flex-direction: column;
+    width: 60%;
+  }
+  .links button {
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: 400;
+  }
+  .links a {
+    font-size: 16px;
+  }
+}
+@media only screen and (min-width: 1280px) {
+}
