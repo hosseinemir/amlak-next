@@ -1,4 +1,4 @@
-import { e2p } from "@/utils/replaceNumber";
+import { p2e } from "@/utils/replaceNumber";
 import styles from "./TextInput.module.css";
 
 export default function TextInput({
@@ -7,10 +7,11 @@ export default function TextInput({
   profileData,
   setProfileData,
   textarea = false,
+  
 }) {
   const changehandler = (e) => {
     const { name, value } = e.target;
-    setProfileData({ ...profileData, [name]: e2p(value) });
+    setProfileData({ ...profileData, [name]: p2e(value) });
   };
   return (
     <div className={styles.container}>
@@ -28,6 +29,7 @@ export default function TextInput({
           name={name}
           value={profileData[name]}
           onChange={changehandler}
+       
         />
       )}
     </div>

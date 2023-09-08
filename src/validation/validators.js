@@ -9,4 +9,8 @@ const testpassword=value =>{
         return true
     }
 }
-export {testemail,testpassword}
+const testprice = value =>{
+    const pricepattern= /[1-9][0-9]*/g
+    return pricepattern.test(value)
+}
+export {testemail,testpassword,testprice}
