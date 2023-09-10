@@ -1,0 +1,19 @@
+.container{
+    width: 100%;
+    max-width: 200px;
+    box-shadow: 0  0 20px -5px var(--palet3);
+    padding: 20px 5px;
+    border-radius: 6px;
+    margin: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    cursor: pointer;
+}
+
+.container button{
+    border: none;
+    background-color: unset;
+    font-weight: 400;
+
+}

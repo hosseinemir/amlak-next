@@ -11,10 +11,10 @@ export default function Header() {
       <div className={styles.links}>
         <ul>
           <li>
-            <Link href={"./"}>صفحه اصلی</Link>
+            <Link href={"/"}>صفحه اصلی</Link>
           </li>
           <li>
-            <Link href={"./buy-residential"}>آگهی ها</Link>
+            <Link href={"/buy-residential"}>آگهی ها</Link>
           </li>
         </ul>
       </div>

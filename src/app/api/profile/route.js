@@ -4,6 +4,23 @@ import { getServerSession } from "next-auth";
 import AmlakUser from "@/models/AmlakUser";
 import Profile from "@/models/Profile";
 import { Types } from "mongoose";
+
+export async function GET() {
+  try {
+    await ConnectDB();
+
+    const profiles = await Profile.find().select("-UserId");
+
+    return NextResponse.json({ data: profiles }, { status: 200 });
+  } catch (err) {
+    console.log(err);
+    return NextResponse.json(
+      { error: "مشکلی در سرور رخ داده است" },
+      { status: 500 }
+    );
+  }
+}
+
 export async function POST(req) {
   try {
     await ConnectDB();

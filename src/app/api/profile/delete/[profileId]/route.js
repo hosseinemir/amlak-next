@@ -7,14 +7,14 @@ export async function DELETE(req, context) {
   try {
     await ConnectDB();
     const id = context.params.profileId;
-    const session =await getServerSession(req);
+    const session = await getServerSession(req);
     if (!session) {
       return NextResponse.json(
         { error: "لطفا وارد حساب کاربری خود شوید" },
         { status: 401 }
       );
     }
-    
+
     const user = await AmlakUser.findOne({ email: session.user.email });
     if (!user) {
       return NextResponse.json(
@@ -30,7 +30,10 @@ export async function DELETE(req, context) {
       );
     }
     await Profile.deleteOne({ _id: id });
-    return NextResponse.json({message:"آگهی با موفیقت حذف شد"},{status:200})
+    return NextResponse.json(
+      { message: "آگهی با موفیقت حذف شد" },
+      { status: 200 }
+    );
   } catch (err) {
     console.log(err);
     return NextResponse.json(

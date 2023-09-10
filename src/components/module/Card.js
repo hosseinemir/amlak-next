@@ -7,7 +7,7 @@ import { HiOutlineLocationMarker } from "react-icons/hi";
 import { BiLeftArrowAlt } from "react-icons/bi";
 import { sp } from "@/utils/replaceNumber";
 import Link from "next/link";
-export default function Card({ data: { category, title, location, price } }) {
+export default function Card({ data: {_id, category, title, location, price } }) {
   const categoryicon = {
     villa: <RiHome3Line />,
     apartment: <MdApartment />,
@@ -24,7 +24,7 @@ export default function Card({ data: { category, title, location, price } }) {
       </p>
       <p className={styles.price}>{sp(price)} تومان</p>
       <div className={styles.more}>
-        <Link href="/">
+        <Link href={`/buy-residential/${_id}`}>
         
         <p>مشاهده آگهی</p>
         <BiLeftArrowAlt/>

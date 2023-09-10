@@ -1,0 +1,134 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+
+}
+.main{
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+.main h1{
+    font-weight: 400;
+    color: var(--palet3);
+}
+.container svg{
+    color: var(--palet3);
+}
+.main span{
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid var(--palet3);
+    width: 100%;
+    margin-top: 10px;
+}
+.main span svg{
+    margin-left: 10px;
+}
+.main h3{
+    margin-top: 30px;
+    color: var(--palet3);
+    font-weight: 400;
+}
+.main ul{
+    list-style: none;
+}
+.main ul li::before{
+    content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+    color: var(--palet3); /* Change the color */
+    font-weight: bold; /* If you want it to be bold */
+    display: inline-block; /* Needed to add space between the bullet and the text */
+    width: 1em; /* Also needed for space (tweak if needed) */
+    margin-right: -1em; /* Also needed for space (tweak if needed) */
+}
+.des{
+    line-height:30px;
+    text-align: justify;
+}
+.sidebar{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 45px;
+}
+.realstate, .price{
+    width: 100%;
+    max-width: 200px;
+    box-shadow: 0  0 20px -5px var(--palet3);
+    padding: 20px 5px;
+    border-radius: 6px;
+   
+}
+.realstate p{
+    font-size: 17px;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.realstate p svg{
+margin-bottom: 15px;
+font-size: 40px;
+}
+.realstate span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 400;
+    margin-top: 10px;
+}
+
+.price{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.category{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    font-weight: 400;
+    font-size: 17px;
+}
+.category svg{
+    font-size: 26px;
+    margin-left: 5px;
+}
+.toman{
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+.cal{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cal svg{
+    margin-left: 5px;
+}
+@media only screen and (min-width: 468px) {
+}
+@media only screen and (min-width: 768px) {
+  .container{
+    flex-direction: row;
+
+  }
+  .main{
+    width: 75%;
+  }
+  .sidebar{
+    width: 25%;
+    max-width: 200px;
+    margin-right: 35px;
+    margin-top: unset;
+  }
+}
+@media only screen and (min-width: 1280px) {
+}
