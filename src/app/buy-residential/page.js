@@ -2,7 +2,7 @@ import BuyResidentialsPage from '@/template/BuyResidentialsPage'
 import React from 'react'
 
 export default async function BuyResidential({searchParams}) {
-  const res = await fetch("http://localhost:3000/api/profile", {
+  const res = await fetch("https://amlak-next-hosseinemir.vercel.app/", {
     cache: "no-store",
   });
   const data = await res.json()
