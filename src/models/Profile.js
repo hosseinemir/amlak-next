@@ -47,6 +47,10 @@ const ProfileSchema = new Schema(
       type: Schema.Types.ObjectId,
       ref: "AmlakUser",
     },
+    published:{
+      type:Boolean,
+      default:false
+    }
   },
   { timestamps: true }
 );

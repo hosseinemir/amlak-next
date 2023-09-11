@@ -4,7 +4,7 @@ import { authOptions } from "@/app/api/auth/[...nextauth]/route"
 import { getServerSession } from "next-auth"
 import Link from "next/link"
 import Ebtn from "@/module/Ebtn"
-export default async function DashboardSidebar({children}) {
+export default async function DashboardSidebar({children,role,email}) {
     const session =await getServerSession(authOptions)
 
   return (
@@ -12,12 +12,14 @@ export default async function DashboardSidebar({children}) {
         <div className={styles.sidebar}>
             <div className={styles.email}>
                 <CgProfile/>
-                <p>{session?.user.email}</p>
+                {role === "ADMIN" ? (<p>ادمین</p>):(null)}
+                <p>{email}</p>
             </div>
             <div className={styles.links}>
                 <Link href={"/dashboard"}>حساب کاربری</Link>
                 <Link href={"/dashboard/my-profiles"}>آگهی های من</Link>
                 <Link href={"/dashboard/add"}>ثبت آگهی</Link>
+                {role === "ADMIN" ? (<Link href={"/admin"}>در انتظار تائید</Link>):(null)}
                 <Ebtn/>
             </div>
 

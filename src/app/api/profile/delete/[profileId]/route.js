@@ -23,7 +23,7 @@ export async function DELETE(req, context) {
       );
     }
     const profile = await Profile.findOne({ _id: id });
-    if (!user._id.equals(profile.UserId)) {
+    if (!user._id.equals(profile.UserId) || user.role !== "ADMIN") {
       return NextResponse.json(
         { error: "دسترسی شما به این آگهی محدود شده است" },
         { status: 403 }
